@@ -103,6 +103,12 @@ zwischen "kann Code schreiben, der läuft" und "ist ein guter Programmierer" aus
 | 22 | GUI Grundlagen (konzeptionell) | C# | 7a.12 |
 | 23 | Git vertieft: Branching, Merge-Konflikte, PR-Workflow | — (Konzept) | neu (didaktisch) + 7a.13 (Versionsverwaltung) |
 | 24 | Dependency Management: Composer/npm | PHP/JS (Konzept) | neu (didaktisch) |
+| 25 | Closures vertieft: eigener Zustand, Currying, Memoization | PHP | neu (didaktisch, dein Wunsch) |
+| 26 | CRUD (Create/Read/Update/Delete) über REST | JS (fetch) | neu (dein Wunsch) |
+| 27 | Reguläre Ausdrücke (RegEx) | PHP + JS | neu (didaktisch, aus Programmiergrundlagen-Audit übernommen) |
+| 28 | Traits & Enums (PHP-spezifisch) | PHP | neu (didaktisch) |
+| 29 | API-Authentifizierung: Basic Auth, Bearer Token | PHP | neu (didaktisch) |
+| 30 | Echtes Debugging mit einem Debugger (Xdebug + PhpStorm) | Konzept/IDE-Workflow | neu (didaktisch) |
 
 **Bewusst weggelassen:** Modul-Verwaltungskram (7a.01 Kursmaterialien/IDE-Setup,
 7a.14 Modulauswertung) — organisatorisch, kein Lerninhalt. "Datentypen | Schleifen |
