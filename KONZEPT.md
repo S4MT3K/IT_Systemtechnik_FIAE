@@ -79,14 +79,14 @@ zwischen "kann Code schreiben, der läuft" und "ist ein guter Programmierer" aus
 
 | # | Thema | Sprache(n) | Herkunft |
 |---|---|---|---|
-| 01 | Komplexe Datentypen, `null`/`undefined`/`Infinity`/`NaN` im Vergleich | PHP + JS (+ C#) | neu (dein Wunsch) |
+| 01 | Komplexe Datentypen, `null`/`undefined`/`Infinity`/`NaN`, Speicherverwaltung (Garbage Collector) im Vergleich | PHP + JS (+ C#) | neu (dein Wunsch) + 7a.07 |
 | 02 | Typsicherheit: PHP Type Hints/`strict_types`, TypeScript-Ausblick | PHP + TS | neu (didaktisch) |
 | 03 | OOP Grundlagen: Klassen, Methoden, Konstruktoren, Getter/Setter | PHP | 7a.03 |
 | 04 | OOP vertieft: Kapselung, Polymorphie, OOA/OOD/OOP | PHP | 7a.04 |
-| 05 | OOP erweitert: Vererbung, Interfaces, abstrakte Klassen | PHP + C# | 7a.05 (bereinigt) |
-| 06 | Clean Code & SOLID-Prinzipien | PHP | neu (didaktisch) |
-| 07 | UML, PAP, Struktogramm | sprachunabhängig + PHP | 7a.06 |
-| 08 | Exception-Handling: try/catch/throw, eigene Exceptions | PHP | 7a.08 |
+| 05 | OOP erweitert: Vererbung, Interfaces, abstrakte & anonyme Klassen | PHP + C# | 7a.05 (bereinigt) |
+| 06 | Clean Code & SOLID-Prinzipien, Code-Dokumentation (PHPDoc/JSDoc) | PHP | neu (didaktisch) + 7a.07 |
+| 07 | UML (inkl. Klassenbeziehungen: Assoziation vs. Attribut), PAP, Struktogramm | sprachunabhängig + PHP | 7a.06 |
+| 08 | Exception-Handling: try/catch/throw, eigene Exceptions, Asserts | PHP | 7a.08 |
 | 09 | Datenstrukturen: Stack, Queue, Linked List, Hash Map | PHP | neu (didaktisch) |
 | 10 | Algorithmen & Design Patterns: Sortieralgorithmen, MVC, 3-Schichten-Architektur | PHP | 7a.13 |
 | 11 | Big-O-Notation / Algorithmuskomplexität | PHP | neu (didaktisch) |
@@ -94,23 +94,44 @@ zwischen "kann Code schreiben, der läuft" und "ist ein guter Programmierer" aus
 | 13 | Callback-Funktionen | JS + PHP | neu (dein Wunsch) |
 | 14 | Funktionale Konzepte: map/filter/reduce, Pure Functions | JS + PHP | neu (didaktisch) |
 | 15 | Async/Await | JS (+ C#-Vergleich) | neu (dein Wunsch) |
-| 16 | Nebenläufigkeit: Threading vs. Event-Loop vs. Multi-Prozess | C# + JS (konzeptionell) | 7a.11 (bereinigt) |
-| 17 | Serialisierung: JSON (& Dateiverarbeitung) | PHP + JS | 7a.10 (bereinigt) |
+| 16 | Nebenläufigkeit: Threading vs. Event-Loop vs. Multi-Prozess, Synchronisation | C# + JS (konzeptionell) | 7a.11 (bereinigt) |
+| 17 | Serialisierung: JSON, Random-Access-Dateizugriff | PHP + JS | 7a.10 (bereinigt) |
 | 18 | REST-APIs | JS (fetch) + PHP (curl) | neu (dein Wunsch) |
 | 19 | Sichere Programmierung: SQL-Injection, XSS, Passwort-Hashing | PHP | neu (didaktisch) |
 | 20 | Testarten (White-/Black-Box) & echtes Unit-Testing | PHP (PHPUnit-Grundidee) | 7a.09 (bereinigt + erweitert) |
 | 21 | Logging statt var_dump/die | PHP | neu (didaktisch) |
 | 22 | GUI Grundlagen (konzeptionell) | C# | 7a.12 |
-| 23 | Git vertieft: Branching, Merge-Konflikte, PR-Workflow | — (Konzept) | neu (didaktisch) |
+| 23 | Git vertieft: Branching, Merge-Konflikte, PR-Workflow | — (Konzept) | neu (didaktisch) + 7a.13 (Versionsverwaltung) |
 | 24 | Dependency Management: Composer/npm | PHP/JS (Konzept) | neu (didaktisch) |
 
 **Bewusst weggelassen:** Modul-Verwaltungskram (7a.01 Kursmaterialien/IDE-Setup,
-7a.14 Modulauswertung) — organisatorisch, kein Lerninhalt.
+7a.14 Modulauswertung) — organisatorisch, kein Lerninhalt. "Datentypen | Schleifen |
+Verzweigungen | Arrays" (7a.02) ebenfalls weggelassen — das ist wortgleich die
+Wiederholung der Grundlagen aus Programmiergrundlagen (dort schon ausführlich
+behandelt), kein neuer Inhalt.
 
-## Offene Fragen an dich
+## Vollständigkeits-Check: jeder Punkt aus Modul 7 zugeordnet
 
-1. 24 Themen ist deutlich mehr als die ursprünglichen 15 — passt der Umfang, oder
-   sollen wir etwas kürzen/auf später verschieben (z.B. 23/24 als optional markieren)?
-2. Reihenfolge/Sprachwahl so ok, oder soll ich was tauschen?
+| Modul-7-Punkt | Inhalt | Abgedeckt durch |
+|---|---|---|
+| 7a.01 | Kursmaterialien/IDE-Setup | bewusst raus (organisatorisch) |
+| 7a.02 | Datentypen/Schleifen/Verzweigungen/Arrays | bewusst raus (= Programmiergrundlagen-Wiederholung) |
+| 7a.03 | Klassen/Methoden/Paket-Hierarchie/Konstruktoren/Getter-Setter | Thema 03 (+ Paket-Hierarchie als Randnotiz) |
+| 7a.04 | Objektaufbau/Kapselung/Polymorphie/OOA/OOD/OOP | Thema 04 |
+| 7a.05 | anonyme/innere/lokale Klassen/Beziehungen/Vererbung/Polymorphismus | Thema 05 + 07 (Beziehungen → UML) |
+| 7a.06 | UML/Pseudocode/Struktogramm/PAP | Thema 07 |
+| 7a.07 | Compiled/Bytecode/Garbage-Collector/Doku/Planen-Entwerfen-Implementieren | Thema 01 (GC) + 06 (Doku) + 07 (Planen via PAP/UML) |
+| 7a.08 | Exception-Handling/try-catch/Asserts | Thema 08 |
+| 7a.09 | „Frameworks" (White-/Black-Box, Bootstrap, .NET) | Thema 20 (bereinigt: Testarten + echte Frameworks getrennt) |
+| 7a.10 | Streams/Serialisierung/Random-Access-File/Dateien | Thema 17 (bereinigt: Java-API-Details raus) |
+| 7a.11 | Threading/Interface Runnable/Synchronisation | Thema 16 (bereinigt: Interface-Detail raus) |
+| 7a.12 | GUI/Events/Layout | Thema 22 |
+| 7a.13 | Sortieralgorithmen/Entwurfsmuster/MVC/3-Schichten/Versionsverwaltung | Thema 10 + 23 (Versionsverwaltung → Git) |
+| 7a.14 | Modulauswertung | bewusst raus (organisatorisch) |
 
-Sobald das steht, schreibe ich die Lektionen.
+Damit sind alle 14 Punkte entweder abgedeckt oder bewusst (und begründet)
+weggelassen — nichts fällt versehentlich hinten runter.
+
+## Nächster Schritt
+
+Konzept steht — ich fange an, die 24 Lektionen zu schreiben.
