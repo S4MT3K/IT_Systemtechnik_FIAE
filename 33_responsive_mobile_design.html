@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<!-- Ohne diesen viewport-meta-tag skaliert ein Handy-Browser die Seite als
+     "Desktop-Seite im Miniaturformat" statt sie wirklich responsiv anzuzeigen. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 33: Responsive & Mobiles Design</title>
+<style>
+  /* ====================================================================
+     MOBILE-FIRST: Basis-Styles gelten fürs kleinste Gerät. Erst DANACH
+     werden per @media-Query größere Bildschirme "aufgebohrt". Das ist
+     der heute übliche Ansatz (umgekehrt zu früher "Desktop first, dann
+     für Mobile runterbrechen") - Grund: die meisten Nutzer weltweit
+     surfen zuerst mobil, und CSS "erweitert" leichter als "abbaut".
+     ==================================================================== */
+  * { box-sizing: border-box; }
+  body { font-family: sans-serif; margin: 0; padding: 1rem; background: #f2f2f2; }
+
+  .karten {
+    display: flex;
+    flex-wrap: wrap;      /* Karten brechen um, statt überzulaufen */
+    gap: 1rem;
+  }
+  .karte {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 100%;        /* Mobil: jede Karte volle Breite, untereinander */
+  }
+  .karte button {
+    /* Touch-Ziele sollten mind. ~44x44px sein - Finger sind ungenauer als
+       ein Mauszeiger. Ein winziger Button ist auf dem Handy kaum treffbar. */
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;  /* Mobil: Menüpunkte untereinander */
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .breakpoint-anzeige::before { content: "Aktueller Breakpoint: Mobil (< 600px)"; }
+
+  /* ====================================================================
+     BREAKPOINT: Tablet (ab 600px Breite)
+     ==================================================================== */
+  @media (min-width: 600px) {
+    .karte { flex: 1 1 calc(50% - 1rem); }   /* 2 Karten pro Reihe */
+    nav ul { flex-direction: row; }            /* Menü wird horizontal */
+    .breakpoint-anzeige::before { content: "Aktueller Breakpoint: Tablet (≥ 600px)"; }
+  }
+
+  /* ====================================================================
+     BREAKPOINT: Desktop (ab 900px Breite)
+     ==================================================================== */
+  @media (min-width: 900px) {
+    .karte { flex: 1 1 calc(33.333% - 1rem); } /* 3 Karten pro Reihe */
+    .breakpoint-anzeige::before { content: "Aktueller Breakpoint: Desktop (≥ 900px)"; }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>Start</li>
+      <li>Produkte</li>
+      <li>Kontakt</li>
+    </ul>
+  </nav>
+
+  <p class="breakpoint-anzeige"></p>
+
+  <div class="karten">
+    <div class="karte"><h3>Karte 1</h3><p>Beispieltext.</p><button>Kaufen</button></div>
+    <div class="karte"><h3>Karte 2</h3><p>Beispieltext.</p><button>Kaufen</button></div>
+    <div class="karte"><h3>Karte 3</h3><p>Beispieltext.</p><button>Kaufen</button></div>
+  </div>
+</body>
+</html>

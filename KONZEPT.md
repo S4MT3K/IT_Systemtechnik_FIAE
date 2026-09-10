@@ -138,6 +138,31 @@ behandelt), kein neuer Inhalt.
 Damit sind alle 14 Punkte entweder abgedeckt oder bewusst (und begründet)
 weggelassen — nichts fällt versehentlich hinten runter.
 
+## Neu aufgenommen — Abgleich mit OneNote-Struktur (Screenshot Systemtechnik)
+
+Der Nutzer hatte in OneNote bereits eine eigene Themen-Gliederung für
+Systemtechnik angelegt (Übersicht, IDE, Grundlagen, Grundbegriffe, Stack/Heap,
+UML, OOP, UI/UX). Abgeglichen gegen die 30 bestehenden Themen hier:
+
+- **Stack und Heap**: NICHT neu aufgenommen — bereits ausführlich in
+  Programmiergrundlagen behandelt (`18-stack_heap.php`, Call-Stack als LIFO,
+  Heap, `memory_get_usage()`), hier nur ein Verweis nötig statt Dopplung.
+- **UML (Klassendiagramm), OOP (Vererbung/Klassen/OOD)**: bereits durch
+  Themen 03–05 und 07 abgedeckt, keine Ergänzung nötig.
+- **IDE-Setup, Modulübersicht**: bleiben bewusst organisatorisch (siehe
+  „Bewusst weggelassen" oben) — der Nutzer hat dazu eigene, bereits vorhandene
+  Notizen, die er separat zum Umformatieren/Pushen bereitstellt.
+- **Grundlagen der Programmierung**: bewusst ausgeklammert — reiner Verweis
+  auf Programmiergrundlagen, kein eigener Inhalt hier.
+- **Echte Lücken, neu ergänzt (Themen 31–33):** ER-Modell, Mock-Up/Skizzen,
+  Responsive & Mobiles Design — siehe Themenliste unten.
+
+| # | Thema | Sprache(n) | Herkunft |
+|---|---|---|---|
+| 31 | ER-Modell: Entität/Attribut/Beziehung, Kardinalitäten (1:1, 1:n, n:m), Übergang zur Tabelle | PHP (Konzept, keine echte DB) | neu (OneNote-Abgleich) |
+| 32 | Mock-Up & Skizzen: Skizze → Wireframe → Mock-Up → Prototyp | Konzept | neu (OneNote-Abgleich) |
+| 33 | Responsive & Mobiles Design: Mobile-First, Breakpoints, Flexbox-Umbruch, Touch-Ziele | HTML/CSS | neu (OneNote-Abgleich) |
+
 ## Nächster Schritt
 
 Konzept steht — ich fange an, die 24 Lektionen zu schreiben.
